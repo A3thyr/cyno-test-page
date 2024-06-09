@@ -1,6 +1,6 @@
+import { useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { SVGProps } from "react";
-import { useMediaQuery } from "@mui/material";
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => {
   const isDesktop = useMediaQuery("(min-width:768px)");

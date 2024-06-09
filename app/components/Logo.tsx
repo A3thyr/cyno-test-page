@@ -2,13 +2,12 @@
 
 import { useMediaQuery } from "@mui/material";
 import {
-  animate,
-  useAnimate,
   motion,
+  useAnimate,
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { useCallback, useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import SvgComponent from "./SvgComponent";
 
 export default function Logo() {

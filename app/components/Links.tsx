@@ -27,54 +27,6 @@ const data = [
 export default function Links() {
   const isDesktop = useMediaQuery("(min-width:768px)");
 
-  const varNum = isDesktop
-    ? {
-        initial: {
-          translateY: "100px",
-        },
-        whileHover: {
-          translateY: "0px",
-        },
-      }
-    : {
-        initial: { translateY: "0px" },
-        whileHover: {},
-      };
-
-  const varNumOp = isDesktop
-    ? {
-        initial: { opacity: 0 },
-        whileHover: { opacity: 1 },
-      }
-    : {
-        initial: { opacity: 1 },
-        whileHover: {},
-      };
-
-  const varSocial = isDesktop
-    ? {
-        initial: {
-          translateY: "30px",
-        },
-        whileHover: {
-          translateY: "0px",
-        },
-      }
-    : {
-        initial: { translateY: "0px" },
-        whileHover: {},
-      };
-
-  const varSocialOp = isDesktop
-    ? {
-        initial: { opacity: 0 },
-        whileHover: { opacity: 1 },
-      }
-    : {
-        initial: { opacity: 1 },
-        whileHover: {},
-      };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -83,9 +35,8 @@ export default function Links() {
       className="flex fixed flex-row w-[91vw] top-[78%] items-start md:items-end justify-between z-[999]"
     >
       <motion.div
-        variants={varNum}
-        initial={varNum.initial}
-        whileHover={varNum.whileHover}
+        initial={isDesktop ? { translateY: "100px" } : { translateY: "0px" }}
+        whileHover={{ translateY: "0px" }}
         transition={{ delay: 0.2 }}
         className="text-white text-[0.9rem] flex flex-col items-start gap-[5px]"
       >
@@ -94,9 +45,8 @@ export default function Links() {
           <span className="font-bold ">ООО «CАЙНО»</span>
         </p>
         <motion.div
-          variants={varNumOp}
-          initial={varNumOp.initial}
-          whileHover={varNumOp.whileHover}
+          initial={isDesktop ? { opacity: 0 } : { opacity: 1 }}
+          whileHover={{ opacity: 1 }}
           className="flex flex-col gap-[5px]"
         >
           {data.map((item, index) => (
@@ -111,9 +61,8 @@ export default function Links() {
         </motion.div>
       </motion.div>
       <motion.div
-        variants={varSocial}
-        initial={varSocial.initial}
-        whileHover={varSocial.whileHover}
+        initial={isDesktop ? { translateY: "30px" } : { translateY: "0px" }}
+        whileHover={{ translateY: "0px" }}
         className="flex flex-col items-end md:items-center"
       >
         <div className="flex flex-row gap-[15px]">
@@ -123,9 +72,8 @@ export default function Links() {
           <Image src={shareLogo} alt="share" className="hidden" />
         </div>
         <motion.div
-          variants={varSocialOp}
-          initial={varSocialOp.initial}
-          whileHover={varSocialOp.whileHover}
+          initial={isDesktop ? { opacity: 0 } : { opacity: 1 }}
+          whileHover={{ opacity: 1 }}
           className="flex flex-row py-[10px] top-0 opacity-100 px-0 md:px-[30px] gap-[10px] items-end md:items-center justify-center"
         >
           <Link href="">

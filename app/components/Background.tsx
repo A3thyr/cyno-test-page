@@ -1,9 +1,9 @@
 "use client";
 
 import { useMediaQuery } from "@mui/material";
+import Spline from "@splinetool/react-spline";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect } from "react";
-import Spline from "@splinetool/react-spline";
 
 export default function Background() {
   const [scope, animate] = useAnimate();

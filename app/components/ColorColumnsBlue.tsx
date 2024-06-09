@@ -1,8 +1,8 @@
 "use client";
 
+import { useMediaQuery } from "@mui/material";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect } from "react";
-import { useMediaQuery } from "@mui/material";
 
 export default function ColorColumnsBlue() {
   const [scope, animate] = useAnimate();
