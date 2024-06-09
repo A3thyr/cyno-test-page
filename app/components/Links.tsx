@@ -66,7 +66,7 @@ export default function Links() {
         className="flex flex-col items-end md:items-center"
       >
         <div className="flex flex-row gap-[15px]">
-          <span className="text-white text-[0.9rem] font-bold">
+          <span className="text-white text-[0.8rem] min-[375px]:text-[0.9rem] font-bold">
             следите за нами
           </span>
           <Image src={shareLogo} alt="share" className="hidden" />
